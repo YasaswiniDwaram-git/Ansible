@@ -1,0 +1,14 @@
+- name: variables from prompt
+  hosts: web
+  vars_prompt:
+    - name: Name
+      prompt: Please enter your name
+    - name: Age
+      prompt: Please enter your age , shh!!! we will keep it a secret
+    - name: Location
+      prompt: Please enter your location
+
+    tasks:
+      -name: print the user information
+        ansible.builtin.debug:
+          msg: "Hi , I am {{Name}} and {{Age}} yr young and at {{Location}} now "
