@@ -3,4 +3,4 @@
   tasks:
     - name: print the info
       ansible.builtin.debug:
-        msg: "Hi , I am {{Name}} and {{age}} yr young and at {{location}} now"
+        msg: "Hi , I am {{Name}} and {{Age}} yr young and at {{Location}} now"

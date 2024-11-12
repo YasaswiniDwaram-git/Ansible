@@ -1,0 +1,24 @@
+- name: variables from files
+  hosts: web 
+  vars:
+    Name: "Chinnu from PLAY level"
+    Age: "25"
+    Location: "Satya's heart"
+  vars_prompt:
+    - name: Name
+      prompt: Please enter your name
+      private: false #prompts are by default confidential , so you cannot see what u enter , but with false you can
+    - name: Age
+      prompt: Please enter your age , shh!!! we will keep it a secret
+      private: false
+    - name: Location
+      prompt: Please enter your location
+      private: false
+  tasks:
+    - name: variables from files
+      vars:
+      Name: "Chinnu from TASK level"
+      Age: "28"
+      Location: "Satya's heart and brain"
+      ansible.builtin.debug:
+        msg: "Hi , I am {{Name}} and {{Age}} yr young and at {{Location}} now"

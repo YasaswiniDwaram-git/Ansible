@@ -3,5 +3,5 @@
   tasks:
     - name: print my info
       ansible.builtin.debug:
-        msg: "Hello {{NAME}} and what's your incident details{{INCIDENT}}"
+        msg: "Hello {{NAME}} and and your incident details are {{INCIDENT}}"
 #use -e or --extra-vars in commandline to give input as arguments
