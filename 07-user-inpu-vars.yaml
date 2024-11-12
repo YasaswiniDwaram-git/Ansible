@@ -9,6 +9,6 @@
       prompt: Please enter your location
 
     tasks:
-      -name: print the user information
+      - name: print the user information
         ansible.builtin.debug:
           msg: "Hi , I am {{Name}} and {{Age}} yr young and at {{Location}} now "
