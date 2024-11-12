@@ -3,4 +3,4 @@
   tasks:
    - name: print the info
       ansible.builtin.debug:
-      msg: "Hi , I am yash and 24 yr young"
+       msg: "Hi , I am yash and 24 yr young"
