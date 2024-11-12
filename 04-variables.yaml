@@ -1,6 +1,6 @@
 - name: variables to print
   hosts: web
   tasks:
-   - name: print the info
+   - name: print the data
       ansible.builtin.debug: 
        msg: "Hi , I am yash and 24 yr young"
