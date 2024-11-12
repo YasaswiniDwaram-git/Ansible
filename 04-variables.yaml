@@ -12,6 +12,6 @@
 
   - name: print the data again
     vars:
+      NAME: "bobby"
     ansible.builtin.debug: 
-     NAME: "bobby"
        msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
