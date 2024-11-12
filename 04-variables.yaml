@@ -8,16 +8,16 @@
   tasks:
    - name: print the data
      ansible.builtin.debug: 
-      msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
+       msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
 
    - name: print the data again
      vars:
-      NAME: "bobby" #task level vars will override play level vars
-      ansible.builtin.debug: 
-      msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
+       NAME: "bobby" #task level vars will override play level vars
+     ansible.builtin.debug: 
+        msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
 
    - name: print the data
      vars:
-     age: "23"
+       age: "23"
      ansible.builtin.debug: 
-      msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
+       msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
