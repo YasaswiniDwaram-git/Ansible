@@ -3,6 +3,7 @@
   vars_prompt:
     - name: Name
       prompt: Please enter your name
+      private: false #prompts are by default confidential , so you cannot see what u enter , but with false you can
     - name: Age
       prompt: Please enter your age , shh!!! we will keep it a secret
     - name: Location
