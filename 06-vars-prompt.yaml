@@ -1,0 +1,6 @@
+- name: variables from files
+  hosts: web
+  tasks:
+    - name: print the info
+      ansible.builtin.debug:
+        msg: "Hi , I am {{Name}} and {{age}} yr young and at {{location}} now"
