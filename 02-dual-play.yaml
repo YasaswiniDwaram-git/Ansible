@@ -1,0 +1,7 @@
+- name: Play-01
+  hosts: web
+  tasks:
+    -name: Play-01 task-01
+     hosts: web
+     ansible.builtin.debug:
+     msg: "Welcome all"
