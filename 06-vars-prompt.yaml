@@ -1,5 +1,5 @@
 - name: variables from files
-  hosts: web
+  hosts: web #ansible will check in this inventory file and if vars or anything is present will read and uses
   tasks:
     - name: print the info
       ansible.builtin.debug:
