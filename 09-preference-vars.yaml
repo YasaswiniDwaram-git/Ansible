@@ -17,8 +17,8 @@
   tasks:
     - name: variables from files
       vars:
-      Name: "Chinnu from TASK level"
-      Age: "28"
-      Location: "Satya's heart and brain"
+        Name: "Chinnu from TASK level"
+        Age: "28"
+        Location: "Satya's heart and brain"
       ansible.builtin.debug:
         msg: "Hi , I am {{Name}} and {{Age}} yr young and at {{Location}} now"
