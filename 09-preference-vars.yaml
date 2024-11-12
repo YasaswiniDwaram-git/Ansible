@@ -6,16 +6,16 @@
     Location: "Satya's heart"
   # vars_files:
   #   - vars.yaml
-  vars_prompt:
-    - name: Name
-      prompt: Please enter your name
-      private: false #prompts are by default confidential , so you cannot see what u enter , but with false you can
-    - name: Age
-      prompt: Please enter your age , shh!!! we will keep it a secret
-      private: false
-    - name: Location
-      prompt: Please enter your location
-      private: false
+  # vars_prompt:
+  #   - name: Name
+  #     prompt: Please enter your name
+  #     private: false #prompts are by default confidential , so you cannot see what u enter , but with false you can
+  #   - name: Age
+  #     prompt: Please enter your age , shh!!! we will keep it a secret
+  #     private: false
+  #   - name: Location
+  #     prompt: Please enter your location
+  #     private: false
   tasks:
     - name: variables from files
       ansible.builtin.debug:
