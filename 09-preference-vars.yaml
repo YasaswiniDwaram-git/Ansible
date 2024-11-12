@@ -4,6 +4,8 @@
     Name: "Chinnu from PLAY level"
     Age: "25"
     Location: "Satya's heart"
+  vars_files:
+    - vars.yaml
   vars_prompt:
     - name: Name
       prompt: Please enter your name
