@@ -9,3 +9,9 @@
    - name: print the data
      ansible.builtin.debug: 
        msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
+
+  - name: print the data again
+     ansible.builtin.debug: 
+     vars:
+     NAME: "bobby"
+       msg: "Hi , I am {{NAME}} and {{age}} yr young and at {{location}} now"
