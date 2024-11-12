@@ -3,4 +3,3 @@
   tasks:
     - name: Play-01 task-01
       ansible.builtin.debug:
-      msg: "Welcome all"
