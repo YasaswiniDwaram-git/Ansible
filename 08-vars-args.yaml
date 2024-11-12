@@ -1,0 +1,7 @@
+- name: inputs to print
+  hosts: web
+  tasks:
+    - name: print my info
+      ansible.builtin.debug:
+        msg: "Hello {{NAME}} and what's your incident details{{INCIDENT}}"
+#use -e or --extra-vars in commandline to give input as arguments
