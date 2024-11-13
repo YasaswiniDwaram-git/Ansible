@@ -1,8 +1,8 @@
 - name: Our family
   hosts: local
   vars:
-    family name: "Dwaram" #string
-    total members: 4 #int
+    family_name: "Dwaram" #string
+    total_members: 4 #int
     titles: # list
       - Mommy
       - Dad
@@ -23,4 +23,4 @@
   tasks:
     - name: print the family info
       ansible.builtin.debug:
-        msg: "Hi this is my {{family name}} , we are {{total members}} in number and hi from {{titles}} and we are happy: {{happy}} , our occupations are {{occupation}}"
+        msg: "Hi this is my {{family_name}} , we are {{total_members}} in number and hi from {{titles}} and we are happy: {{happy}} , our occupations are {{occupation}}"
