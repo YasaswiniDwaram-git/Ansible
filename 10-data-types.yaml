@@ -1,0 +1,26 @@
+- name: Our family
+  hosts: local
+  vars:
+    family name: "Dwaram" #string
+    total members: 4 #int
+    titles: # list
+      - Mommy
+      - Dad
+      - Bobby
+      - Chinnu
+      - ammama
+      happy: true #boolean
+      occupation: #map/dictionary (has key ,value pairs)
+        mum: house
+        dad: farm
+        bob: study
+        amam: land
+        chinnu: soft
+        house: # can have a list again inside a list
+          - food
+          - pooja
+          - finance
+    tasks:
+      - name: print the family info
+        ansible.builtin.debug:
+          msg: "Hi this is my {{family name}} , we are {{total members}} in number and hi from {{titles}} and we are happy: {{happy}} , our occupations are {{occupation}}"
