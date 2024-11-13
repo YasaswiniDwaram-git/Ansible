@@ -1,5 +1,6 @@
 - name: Our family
   hosts: local
+  connection: local #to execute from local host , so no need to give username and password details
   vars:
     family_name: "Dwaram" #string
     total_members: 4 #int
