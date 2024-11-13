@@ -1,0 +1,42 @@
+more on inventory---
+
+ungrouped -
+
+172.31.83.159
+172.31.83.102
+172.31.83.158
+
+grouped -
+
+[backend]
+172.31.83.159
+172.31.83.102
+172.31.83.158
+
+group of grouped -
+
+[servers:expense]
+web
+backend
+mysql
+
+[all:vars] #same vars will be for all servers in an inventory
+ansible_user=ec2-user
+ansible_password=DevOps321
+
+ansible -i inventory ungrouped/all/<group_name> --list-hosts --> to list hosts from inventory file
+
+data types
+--------------
+int , float , double , decimal , long , etc -->number
+boolean -->true/false
+list
+map
+
+
+Ansible is developed using python
+
+hosts: web --> target IP under web group
+
+[ --> list
+{ --> map
