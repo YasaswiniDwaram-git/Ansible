@@ -14,5 +14,5 @@
   - name: if user is not present
     ansible.builtin.debuh:
       msg: "user is not present , creating"
-      when: exit_status | int = 0
+    when: exit_status | int = 0
 
