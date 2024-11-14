@@ -5,6 +5,7 @@
   - name: check user status
     ansible.builtin.command: id expense
     register: exit_status
+    ignore_errors: True
 
   - name: if user is present 
     ansible.builtin.debug:
