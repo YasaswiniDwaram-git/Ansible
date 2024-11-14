@@ -6,6 +6,6 @@
       ansible.builtin.shell: ls -ltr > /tmp/output.txt  #shell logs intp server and executes the command 
       #but command module just gives the command
      
-    - name: check process using command
-      ansible.builtin.command: ps -ef | grep ssh
+    - name: check process using 
+      ansible.builtin.shell: ps -ef | grep ssh
       register: output
