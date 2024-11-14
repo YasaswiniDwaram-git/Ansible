@@ -30,7 +30,7 @@
       ansible.builtin.debug:
         msg: "Min: {{ numbers | min }}, Max: {{ numbers | max }}"
 
-    - name: convert maps to list
+    - name: convert map to list
       vars:
         data:
           name: "chinnu"
@@ -38,4 +38,13 @@
           location: "satya's heart"
       ansible.builtin.debug:
         msg: "{{ data | dict2items }}"
+
+    - name: convert list to map
+      vars:
+        data:
+        - {"key": "name","value": "chinnu"}
+        - {"key": "age","value": "24"}
+        - {"key": "location","value": "satya's heart"}
+      ansible.builtin.debug:
+        msg: "{{ data | items2dict }}"
        
