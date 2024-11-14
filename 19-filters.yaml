@@ -47,4 +47,11 @@
         - {"key": "location","value": "satya's heart"}
       ansible.builtin.debug:
         msg: "{{ data | items2dict }}"
+
+    - name: check I.P address format
+      vars:
+        my_IP: "54.210.240.97"
+      ansible.builtin.debug:
+        msg: "{{ my_IP | ansible.utils.ipv4 }}, {{ my_IP | ansible.utils.ipv6 }}"
+
        
