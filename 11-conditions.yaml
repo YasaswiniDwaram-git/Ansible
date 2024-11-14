@@ -5,13 +5,13 @@
   - name: number
     prompt: please enter the number
     private: false
-    tasks:
-      - name: print this if less than 10
-        ansible.builtin.debug:
-          msg: " Given number {{number}} is less than 10"
-        when: number | int < 10
+  tasks:
+  - name: print this if less than 10
+    ansible.builtin.debug:
+      msg: " Given number {{number}} is less than 10"
+    when: number | int < 10
       
-      - name: print this if greater than or equals 10
-        ansible.builtin.debug:
-          msg: "Given number {{number}} is greater or equals 10 "
-        when: number | int >= 10
+  - name: print this if greater than or equals 10
+    ansible.builtin.debug:
+      msg: "Given number {{number}} is greater or equals 10 "
+    when: number | int >= 10
