@@ -2,6 +2,10 @@
   hosts: local
   connection: local
   tasks:
-    - name: execute the command
-      ansible.builtin.shell: ls -ltr > /tmp/output.txt #using redirectories to test
+    - name: execute the command/shell #using redirectories to for command won'r work so use shell
+      ansible.builtin.shell: ls -ltr > /tmp/output.txt  #shell logs intp server and executes the command 
+      #but command module just gives the command
      
+    - name: check process using command
+      ansible.builtin.command: ps -ef | grep ssh
+      register: output
