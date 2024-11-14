@@ -1,0 +1,18 @@
+- name: create user
+  hosts: web
+  become: yes
+  tasks:
+  - name: check user status
+    ansible.builtin.command: id expense
+    register: exit_status
+
+  - name: if user is present 
+    ansible.builtin.debug:
+      msg: "user already exists"
+    when: exit_status | int != 0
+
+  - name: if user is not present
+    ansible.builtin.debuh:
+      msg: "user is not present , creating"
+      when: exit_status | int = 0
+
