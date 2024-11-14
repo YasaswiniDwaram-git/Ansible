@@ -5,3 +5,16 @@
     - name: print default variable
       ansible.builtin.debug:
         msg: " Hello {{ user | default('Ansible') }}"
+
+    - name: convert to UPPER_CASE
+      vars:
+        greeting: "HEllO RamESh"
+      ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"
+
+    - name: convert to UPPER_CASE
+      vars:
+        greeting: "HEllO RamESh"
+      ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"
+       
