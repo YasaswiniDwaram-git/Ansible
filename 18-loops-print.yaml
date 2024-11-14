@@ -1,13 +1,15 @@
 - name: loops demo
   hosts: local
   connection: local
+  vars_prompt:
+    name: "Name"
+    prompt: "what is your name?"
+    private: false
+
   tasks:
     - name: print names
-      vars_prompt:
-        name: "{{ item }}"
-        msg: "what is your name?"
       ansible.builtin.debug:
-        msg: " HELLO {{ item }}"
+        msg: " HELLO {{ Name }}"
       loop:
        - chinnu
        - bob
