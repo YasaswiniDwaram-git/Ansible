@@ -4,16 +4,13 @@
   tasks:
   - name: check user status
     ansible.builtin.command: id expense
-    register: exit_status
+    register: USER
     ignore_errors: True
 
-  - name: if user is present 
+  - name: print the user info
     ansible.builtin.debug:
-      msg: "user already exists"
-    when: exit_status.rc | int != 0
+      msg: "user info:{{USER}}"
 
-  - name: if user is not present
-    ansible.builtin.debug:
-      msg: "user is not present , creating"
-    when: exit_status.rc | int == 0
-
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0
