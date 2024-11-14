@@ -27,14 +27,14 @@
 
   - name: create route 53 records
     amazon.aws.route53:
-    tate: present
-    zone: "{{ zone }}"
-    record: "{{ item.item }}.{{ zone }}"
-    type: A
-    ttl: 1
-    value: {{ item,instances[0].private_ip_address }}
-    wait: true
+     state: present
+     zone: "{{ zone }}"
+     record: "{{ item.item }}.{{ zone }}"
+     type: A
+     ttl: 1
+     value: {{ item,instances[0].private_ip_address }}
+     wait: true
     #overwrite: true (if record already present)
-  loop: "{{ ec2_instances.results }}"
+   loop: "{{ ec2_instances.results }}"
 
   
