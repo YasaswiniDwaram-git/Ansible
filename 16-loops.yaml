@@ -9,4 +9,4 @@
       loop:
       - { name: 'mysql', state: absent }
       - { name: 'nginx', state: absent }
-      - { name: 'postfi', state: absent }
+      - { name: 'postfix', state: absent }
