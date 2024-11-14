@@ -10,10 +10,10 @@
   - name: if user is present 
     ansible.builtin.debug:
       msg: "user already exists"
-    when: exit_status | int != 0
+    when: exit_status.rc | int != 0
 
   - name: if user is not present
     ansible.builtin.debug:
       msg: "user is not present , creating"
-    when: exit_status | int = 0
+    when: exit_status.rc | int == 0
 
