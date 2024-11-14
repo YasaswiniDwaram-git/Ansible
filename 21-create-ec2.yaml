@@ -37,4 +37,17 @@
     #overwrite: true (if record already present)
     loop: "{{ ec2_instances.results }}"
 
+  - name: create route 53 public record
+    amazon.aws.route53:
+     state: present
+     zone: "{{ zone }}"
+     record: "{{ item.item }}.{{ zone }}"
+     type: A
+     ttl: 1
+     value: "{{ item.instances[0].public_ip_address }}"
+     wait: true
+    #overwrite: true (if record already present)
+    loop: "{{ ec2_instances.results }}"
+    when: ec2_instances.results.item == "frontend"
+
   
