@@ -4,9 +4,9 @@
   tasks:
     - name: print names
       ansible.builtin.package:
-        name: "{{ item }}"
-        state: present
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
       loop:
-      - mysql
-      - nginx
-      - postfix
+      - { name: 'mysql', state: absent }
+      - { name: 'nginx', state: absent }
+      - { name: 'postfi', state: absent }

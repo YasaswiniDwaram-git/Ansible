@@ -4,7 +4,7 @@
   vars_prompt:
     name: "Name"
     prompt: "what is your name?"
-    private: false
+    private: false # just used loop unnecesarily , wanted to do the prompt practice
 
   tasks:
     - name: print names
