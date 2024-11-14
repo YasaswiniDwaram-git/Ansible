@@ -24,4 +24,16 @@
       ansible.builtin.debug:
         msg: "{{ numbers | unique }}"
 
+    - name: print min
+      vars:
+        numbers: [1,2,2,5,77,3,3,7,8,9,0,43,43,34]
+      ansible.builtin.debug:
+        msg: "{{ numbers | min }}"
+
+    - name: print max
+      vars:
+        numbers: [1,2,2,5,77,3,3,7,8,9,0,43,43,34]
+      ansible.builtin.debug:
+        msg: "{{ numbers | max }}"
+
        
