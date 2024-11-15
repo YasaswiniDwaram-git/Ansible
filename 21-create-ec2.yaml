@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: 
-    subnet_id: "subnet-0f99accfdd4bccec9"  #replace subnet ID from networking in aws
+    subnet_id: "subnet-0d7c3f7d3f9406c06"  #replace subnet ID from networking in aws
     sg_id: "sg-0128838caffae8584"
     ami_id: "ami-09c813fb71547fc4f"
     zone: yashd.icu
@@ -53,7 +53,7 @@
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
-    #overwrite: true (if record already present)
+    overwrite: true #(if record already present)
     loop: "{{ ec2_instances.results }}"
     when: item.item == "frontend"
 
