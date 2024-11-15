@@ -41,7 +41,7 @@
      ttl: 1
      value: "{{ item.instances[0].private_ip_address }}"
      wait: true
-    overwrite: true #(if record already present)
+     overwrite: true #(if record already present)
     loop: "{{ ec2_instances.results }}"
 
   - name: create route 53 public record
@@ -53,7 +53,7 @@
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
-    overwrite: true #(if record already present)
+      overwrite: true #(if record already present)
     loop: "{{ ec2_instances.results }}"
     when: item.item == "frontend"
 
